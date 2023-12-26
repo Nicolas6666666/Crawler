@@ -18,7 +18,7 @@ class Frontier(object):
             # Save file does not exist, but request to load save.
             self.logger.info(
                 f"Did not find save file {self.config.save_file}, "
-                f"starting from seed.")
+                "starting from seed.")
         elif os.path.exists(self.config.save_file) and restart:
             # Save file does exists, but request to start from seed.
             self.logger.info(
@@ -46,7 +46,7 @@ class Frontier(object):
                 tbd_count += 1
         self.logger.info(
             f"Found {tbd_count} urls to be downloaded from {total_count} "
-            f"total urls discovered.")
+            "total urls discovered.")
 
     def get_tbd_url(self):
         try:

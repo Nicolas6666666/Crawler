@@ -152,13 +152,13 @@ def extract_next_links(url, resp):
         print(f"1. URL with largest word count: {word_tracker.get_largest_word_count()[0]}")
         print("------------------------------------------------------------------------------------------------")
         print(f"1.1 max word count: {word_tracker.get_largest_word_count()[1]} ")
-        print(f"2. First 50 common words: ")
+        print("2. First 50 common words: ")
         for key, value in word_tracker.get_50_words_count().items():
             print(f"{key} --- {value}")
         print("------------------------------------------------------------------------------------------------")
         print(f"3. Number of  Unique URLs: {url_tracker.get_unique_url_count()}")        
         print("------------------------------------------------------------------------------------------------")
-        print(f"4. ICS domains:")
+        print("4. ICS domains:")
         for key, value in url_tracker.get_ics_subdomains().items():
             print(f"{key} --- {value}")
         print("------------------------------------------------------------------------------------------------")
