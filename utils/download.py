@@ -1,12 +1,12 @@
-import requests
 import cbor
 import time
 
 from utils.response import Response
+from security import safe_requests
 
 def download(url, config, logger=None):
     host, port = config.cache_server
-    resp = requests.get(
+    resp = safe_requests.get(
         f"http://{host}:{port}/",
         params=[("q", f"{url}"), ("u", f"{config.user_agent}")])
     try:
